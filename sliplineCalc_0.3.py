@@ -4,11 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 if sys.platform == 'win32':
     import winsound
-    
-if sys.platform == 'darwin' or sys.platform == 'os2' or sys.platform == 'os2emx':
-    print("Incompatible operating system. Consider true Unix or Windows variants.")
-    time.sleep(10)
-    sys.exit()
 
 try:
     import seaborn as sb
