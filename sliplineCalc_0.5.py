@@ -292,9 +292,9 @@ def createFigures(outputPath):
         SL_plunge = int(SL_plunge)
         
         # Make the stereograms
-        plt.title('{}'.format(objectID))
+        print("Creating figure for {}".format(objectID))
         fig = plt.figure(figsize = (8, 8))
-        ax = fig.add_subplot(111, projection = 'stereonet', title = "{}".format(objectID))
+        ax = fig.add_subplot(111, projection = 'stereonet')
         ax.plane(C_Strike, C_Dip, c = 'b', label = 'C-Plane %03d/%02d' % (C_Strike, C_Dip))
         ax.plane(S_Strike, S_Dip, c = 'r', label = 'S-Plane %03d/%02d' % (S_Strike, S_Dip))
         ax.line(SL_azimuth, SL_plunge, c = 'k', label = 'Slip line %03d/%02d' % (SL_azimuth, SL_plunge))
@@ -304,7 +304,8 @@ def createFigures(outputPath):
     slipLines.close()
     if sys.platform == 'win32':
         winsound.MessageBeep()
-    print("Completed in {:.3f} seconds".format(time.clock() - start))
+    print("\nCompleted in {:.3f} seconds".format(time.clock() - start))
+    print("Thank you for using Slip Line Calculator v0.5")
     
     
 def main():
