@@ -13,18 +13,9 @@ except ImportError:
         os.system('python get-pip.py')
     
     if sys.platform == 'linux':
-        os.system('pip3 install seaborn')
-    else:
-        os.system('pip3 install seaborn')
-    
-    if sys.platform == 'linux':
         os.system('pip3 install mplstereonet')
     else:
-        os.system('pip3 install mplstereonet')
-    
-    if sys.platform == 'linux':
-        os.system('sudo apt install speech-dispatcher')
-    
+        os.system('pip install mplstereonet')
     
 # grab argument input from the user
 parser = argparse.ArgumentParser()
