@@ -11,9 +11,13 @@ except ImportError:
     print("Installing missing modules, please wait...\n")
     if sys.platform == 'win32':
         os.system('python get-pip.py')
+    if sys.platform == 'darwin' os sys.platform == 'os2':
+        os.system('sudo easy_install pip')
     
     if sys.platform == 'linux':
         os.system('pip3 install mplstereonet')
+    elif sys.platform == 'darwin' or sys.platform == 'os2':
+        os.system('pip install mplstereonet')
     else:
         os.system('pip install mplstereonet')
     
