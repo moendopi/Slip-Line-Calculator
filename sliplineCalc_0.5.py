@@ -305,11 +305,12 @@ def createFigures(outputPath):
     if sys.platform == 'win32':
         winsound.MessageBeep()
     print("\nCompleted in {:.3f} seconds".format(time.clock() - start))
+    print("\nYour figures can be found at {}".format(newDir))
     print("Thank you for using Slip Line Calculator v0.5")
     
     
 def main():
-    print("Slip Line Calculator version 0.5")
+    print("\n*** Slip Line Calculator version 0.5 ***")
     print("Written by Ben Weinmann")
     print("Original Excel by John Whitmore")
     print("Maths derived from SCslip by David Allison")
