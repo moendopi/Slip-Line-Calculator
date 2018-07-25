@@ -10,7 +10,8 @@ On Windows hit the Windows key, type cmd, and hit enter and a new command line t
 
 
 **CALLING THE PROGRAM IN THE COMMAND LINE
-*SYNTAX:
+
+**SYNTAX:
 
 *Linux: 
 
