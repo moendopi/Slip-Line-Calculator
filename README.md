@@ -26,6 +26,9 @@ Alternatively the arguments can be left out and the program will prompt the user
 python sliplineCalc.py -i [somefile.csv] -o [anewfiletobewrittento.csv]
 Or alternatively, the command line arguments may be left out and the user will be prompted to give input.
 
+*Help:
+
+Type python(3) sliplineCalc_0.5.py -h for full help.
 
 **DATA
 
