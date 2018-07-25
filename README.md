@@ -5,6 +5,10 @@ Thank you for using Slipline Calculator. This program was written by Ben Weinman
 
 **USAGE:
 
+On Linux open a new terminal window.
+On Windows hit the Windows key, type cmd, and hit enter and a new command line terminal will open. 
+
+
 **CALLING THE PROGRAM IN THE COMMAND LINE
 *SYNTAX:
 
