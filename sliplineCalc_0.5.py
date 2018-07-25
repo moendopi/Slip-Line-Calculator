@@ -11,7 +11,7 @@ except ImportError:
     print("Installing missing modules, please wait...\n")
     if sys.platform == 'win32':
         os.system('python get-pip.py')
-    if sys.platform == 'darwin' os sys.platform == 'os2':
+    if sys.platform == 'darwin' or sys.platform == 'os2':
         os.system('sudo easy_install pip')
     
     if sys.platform == 'linux':
@@ -20,7 +20,7 @@ except ImportError:
         os.system('pip install mplstereonet')
     else:
         os.system('pip install mplstereonet')
-    
+
 # grab argument input from the user
 parser = argparse.ArgumentParser()
 parser.add_argument('-i', '--dataIn', help="Enter the name of the file, or the path to the file plus the file name")
@@ -319,7 +319,6 @@ def main():
         
     # assign calculated data from original to list variable
     slipLines = calculateSlips(inputData)
-    print(slipLines)
     
     # pass calculated data to be written to csv
     outputPath = toCSV(slipLines)
