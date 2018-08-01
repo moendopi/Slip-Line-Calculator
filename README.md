@@ -5,7 +5,7 @@ Thank you for using Slipline Calculator. This program was written by Ben Weinman
 
 **USAGE:
 
-**Python 3.x is required; will not work with Python2.x
+**Python 3.x is required; will not work with Python2.x yet as I haven't made the adequate exceptions for it.
 On Linux open a new terminal window.
 On Windows hit the Windows key, type cmd, and hit enter and a new command line terminal will open. 
 
