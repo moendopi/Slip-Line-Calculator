@@ -85,21 +85,12 @@ def slipLine(objectID, c_strike, c_dip, s_strike, s_dip, quad):
     
     # Lower hemisphere
     if a_z < 0:
-        a_xLH = -a_x
+        a_xLH, a_yLH, a_zLH = -a_x, -a_y, -a_z
+
     else:
-        a_xLH = a_x
-    
-    if a_z < 0:
-        a_yLH = -a_y
-    else:
-        a_yLH = a_y
-    
-    if a_z < 0:
-        a_zLH = -a_z
-    else:
-        a_zLH = a_z
-    
-    
+        a_xLH, a_yLH, a_zLH = a_x, a_y, a_z
+
+
     # Vector B - Slip direction
     # 3D cross-prouct
     b_x =  (c_y * a_z - c_z * a_y) / math.sin(thetaAC)
@@ -108,30 +99,18 @@ def slipLine(objectID, c_strike, c_dip, s_strike, s_dip, quad):
     
     # Lower hemisphere
     if b_z < 0:
-        b_xLH = -b_x
+        b_xLH, b_yLH, b_zLH = -b_x, -b_y, -b_z
     else:
-        b_xLH = b_x
-    
-    if b_z < 0:
-        b_yLH = -b_y
-    else:
-        b_yLH = b_y
-    
-    if b_z < 0:
-        b_zLH = -b_z
-    else:
-        b_zLH = b_z
+        b_xLH, b_yLH, b_zLH = b_x, b_y, b_z
     
     # Slip direction
     if b_xLH < 0 and b_yLH >= 0:
         azimuth = 450 - math.degrees(math.atan2(b_yLH, b_xLH))
     else:
-        azimuth = 90 - math.degrees(math.atan2(b_yLH, b_xLH))
-    azimuth = round(azimuth)
+        azimuth = round(90 - math.degrees(math.atan2(b_yLH, b_xLH)))
     
     # Plunge
-    plunge = 90 - math.degrees(math.acos(b_zLH))
-    plunge = round(plunge)
+    plunge = round(90 - math.degrees(math.acos(b_zLH)))
 
     final_product = [str(objectID), int(c_strike), int(c_dip), int(s_strike), int(s_dip), str(quad), int(azimuth), int(plunge)]
     return final_product
@@ -226,6 +205,7 @@ def toCSV(dataOut):
     
     try:
         outputFile = open(outputPath, 'w', newline = '')
+        
     except PermissionError:
         print("{} is open. Please close it and try again.".format(outputPath))
         time.sleep(10)
@@ -327,4 +307,4 @@ def main():
     
     createFigures(outputPath)
 		
-main()    
+main()
