@@ -13,6 +13,10 @@ except ImportError:
         os.system('python get-pip.py')
     if sys.platform == 'darwin' or sys.platform == 'os2':
         os.system('sudo easy_install pip')
+    if sys.platform == 'linux':
+		os.system('pip3 install numpy')
+	elif sys.platform == 'win32':
+		os.system('pip install numpy')
     
     if sys.platform == 'linux':
         os.system('pip3 install mplstereonet')
