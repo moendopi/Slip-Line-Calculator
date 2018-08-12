@@ -3,7 +3,7 @@ A quick Python program to take S-C strikes/dips and find the slip lines
 
 ***If you have more than 20 measurements, it is recommended that you close any programs that use a lot of RAM such as Chrome and Firefox, or ArcGIS/QGIS. As pyplot creates figures it holds each in memory until the program it done and cane take up a large amount of memory.
 
-Thank you for using Slipline Calculator. This program was written by Ben Weinmann (Auburn University, brw0025@auburn.edu). It was built upon previous work by John Whitmore. And his work was built upon previous work by David Allison at the University of South Alabama.
+Thank you for using Slipline Calculator. This program was written by Ben Weinmann (Auburn University, brw0025@auburn.edu). It was built upon previous work by Dr. David Allison at the University of South Alabama.
 
 **USAGE:
 
