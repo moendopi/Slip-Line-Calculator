@@ -19,6 +19,7 @@ On Windows hit the Windows key, type cmd, and hit enter and a new command line t
 *Linux: 
 
 python3 sliplineCalc.py -i [somefile.csv] -o [anewfiletobewrittento.csv] 
+-or-
 python3 sliplineCalc.py --dataIn [somefile.csv] --dataOut [anewfiletobewrittento.csv]
 
 Alternatively the arguments can be left out and the program will prompt the user for input.In that case use: python3 sliplineCalc.py
