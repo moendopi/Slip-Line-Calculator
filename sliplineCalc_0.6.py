@@ -7,16 +7,17 @@ if sys.platform == 'win32':
     
 try:
     import mplstereonet
-except ImportError:
+    import numpy as np
+except ModuleNotFoundError:
     print("Installing missing modules, please wait...\n")
     if sys.platform == 'win32':
         os.system('python get-pip.py')
     if sys.platform == 'darwin' or sys.platform == 'os2':
         os.system('sudo easy_install pip')
     if sys.platform == 'linux':
-		os.system('pip3 install numpy')
-	elif sys.platform == 'win32':
-		os.system('pip install numpy')
+        os.system('pip3 install numpy')
+    elif sys.platform == 'win32':
+        os.system('pip install numpy')
     
     if sys.platform == 'linux':
         os.system('pip3 install mplstereonet')
@@ -24,6 +25,15 @@ except ImportError:
         os.system('pip install mplstereonet')
     else:
         os.system('pip install mplstereonet')
+        os.system('pip install numpy')
+        os.system('pip install matplotlib')
+
+    import mplstereonet
+    import numpy as np
+    import matplotlib.pyplot as plt
+
+
+
 
 # grab argument input from the user
 parser = argparse.ArgumentParser()
